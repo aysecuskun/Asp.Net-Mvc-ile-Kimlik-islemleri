@@ -1,0 +1,92 @@
+﻿@model Entities.Randevu
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Il.İlAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Il.İlAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ilce.İlceAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ilce.İlceAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Neden.RandevuAlmaNeden)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Neden.RandevuAlmaNeden)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Saat.Saatler)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Saat.Saatler)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RandevuGunu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RandevuGunu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Onay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Onay)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-6">
+                <input type="submit" value="Sil" class="btn btn-default" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-8">
+                @Bootstrap.LinkButton("/Randevu/Index", "default", string.Empty, string.Empty, "arrow-left", " Geri Dön")
+
+            </div>
+        </div>
+    }
+</div>

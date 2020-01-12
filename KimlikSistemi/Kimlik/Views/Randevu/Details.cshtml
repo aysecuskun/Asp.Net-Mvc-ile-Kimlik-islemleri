@@ -1,0 +1,69 @@
+﻿@model Entities.Randevu
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<div>
+    <h4>Randevu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Ad
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            Soyad
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+        <dt>
+            Şehir
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Il.İlAdi)
+        </dd>
+        <dt>
+            İlçe/Yer
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ilce.İlceAdi)
+        </dd>
+        <dt>
+            Gün
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RandevuGunu)
+        </dd>
+        <dt>
+            Saat
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Saat.Saatler)
+        </dd>
+        <dt>
+            Randevu Oluşturma Nedeni
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Neden.RandevuAlmaNeden)
+        </dd>
+        <dt>
+            Randevu Onay
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Onay)
+        </dd>
+    </dl>
+    <div class="col-md-8 col-md-offset-2">
+        <p>
+            @Bootstrap.LinkButton("/Randevu/Edit/" + Model.Id, "warning", string.Empty, string.Empty, "edit", " Düzenle")
+            @Bootstrap.LinkButton("/Randevu/Index", "default", string.Empty, string.Empty, "arrow-left", " Geri Dön")
+        </p>
+    </div>
+</div>
+

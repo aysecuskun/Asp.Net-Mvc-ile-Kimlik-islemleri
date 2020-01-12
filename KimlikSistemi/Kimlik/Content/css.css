@@ -1,0 +1,106 @@
+﻿
+html {
+    font-size: 10px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+   
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+
+#profile-image {
+    width:100%;
+}
+   
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+/*navbar*/
+
+nav {
+    font-family: Montserrat;
+    background-color:darkgrey;
+    color: darkgray;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin: 0;
+}
+
+#logo-box {
+    float: left;
+    padding-top: .5rem;
+}
+
+    #logo-box .logo {
+        color:white;
+        font-weight: 700;
+        font-size: 3.2rem;
+        font-family: 'Dancing Script', cursive;
+        text-decoration: none;
+    }
+
+#nav-links {
+    float: right;
+}
+
+    #nav-links .nav-item {
+        float: left;
+        margin: .4rem;
+    }
+
+    #nav-links .nav-link {
+        color:white;
+        font-size: 1.6rem;
+        font-weight: 700;
+        display: block;
+        padding: 1.6rem;
+        letter-spacing: .1rem;
+        transition: color .3s;
+    }
+
+        #nav-links .nav-link:hover {
+            color: white;
+        }
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Dancing Script', cursive;
+    margin-top: 10px;
+    margin-bottom:10px;
+    font-size: 40px;
+    text-align:center;
+    color:white;
+
+}
+main {
+    background-color:darkseagreen;
+}
+
+.nav-tabs{
+    padding-top:100px;
+ 
+}

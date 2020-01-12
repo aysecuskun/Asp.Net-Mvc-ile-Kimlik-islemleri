@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Ok";
+}
+
+<link href="~/Content/Login-register.css" rel="stylesheet" />
+<section class="login-info">
+    <div class="container">
+        <div class="row main">
+            <div class="form-header">
+                <h1 class="text-center ">Yönlendiriliyorsunuz...</h1>
+
+            </div>
+            <div class="main-content">
+                <div class="text-success ">
+                    <h2 style="color:black;"><span class="glyphicon glyphicon-ok" style="color:forestgreen;"></span>Ödeme Alındı</h2>
+                    <hr />
+                    <p class="text-justify">
+                        Lütfen Ödemeyi Onaylamak için mailinize gelen linki tıklayınız....
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(function () {
+
+        $("footer").parent().hide();
+        setTimeout(function () {
+            window.location = "/Randevu/Index";
+        }, 3000)
+    });
+</script>
+
+
+

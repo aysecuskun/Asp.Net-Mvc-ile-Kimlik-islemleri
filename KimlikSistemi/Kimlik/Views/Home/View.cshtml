@@ -1,0 +1,86 @@
+﻿@using Entities.ModelView
+@model SehirİlceViewModel
+@{
+    ViewBag.Title = "İL-İLÇE SEÇİMİ";
+    Layout = null;
+}
+
+@using (Html.BeginForm())
+{
+    <section>
+        <div class="container">
+            <div class="login-form">
+                <div class="main-div">
+
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.IlId)
+                    </div>
+                    <div class="editor-field">
+                        @Html.DropDownListFor(model => model.IlId, ViewBag.Ulkeler as SelectList, "--- ŞEHİR SEÇİNİZ ---")
+                        @Html.ValidationMessageFor(model => model.IlId)
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.IlceId)
+                    </div>
+                    <div class="editor-field">
+                        @Html.DropDownListFor(model => model.IlceId, Enumerable.Empty<SelectListItem>(), "--- İLÇE SECİNİZ ---")
+                        @Html.ValidationMessageFor(model => model.IlceId)
+                    </div>
+                    <p>
+                        <input type="submit" value="Kaydet" />
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+}
+    <script type="text/javascript">
+    $(document).ready(function () {
+        // şehir seçildiğinde bu fonksiyon çalışır
+        $('#IlId').change(function () {
+            // seçilen ülkenin id sini al
+            var sehirId = $(this).val();
+
+            // secilen ülkenin id sini kullanarak Konum controller
+            // sınıfı içerisindeki Sehirler metoduna çağrıda bulunuyoruz.
+            // bu metod dan dönen listeyi kullanarak .each fonksiyonu ile
+            // sehirleri dolduruyoruz...
+            if (sehirId != null && sehirId != '') {
+                $.ajax({
+                    type: "post",
+                    url: '@Url.Action("Sehirler", "Konum")',
+                    data: { sehirId: sehirId },
+                    success: function (ilceler) {
+                        $.each(ilceler, function (index, ilce) {
+                            $('#IlceId').append($('<option/>', {
+                                value: ilce.Id,
+                                text: ilce.Ad
+                            }));
+                        });
+                    },
+                    error: function () {
+                        // bu kısımda eğer ajax işlemi başarısız ise
+                        // hata mesajı verebiliriz.
+                        alert("Hata");
+                    },
+                    beforeSend: function () {
+                        // bu kısımda form postalanmadan önce yapılacak
+                        // işler belirlenebilir. mesela postalama başladığı
+                        // anda loading resmi görüntüleyebiliriz.
+                    },
+                    complete: function () {
+                        // bu kısımda form postalandıktan sonra yapılacak
+                        // işler belirlenebilir. mesela postalama bittiği
+                        // anda loading resmi gizleyebiliriz.
+                    }
+                });
+            }
+        });
+    });
+    </script>
+
+
+

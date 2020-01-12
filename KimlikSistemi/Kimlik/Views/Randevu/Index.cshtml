@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Entities.Randevu>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="col-md-10 col-md-offset-1" style="padding-top:20px;">
+    <div class="row" style="padding-top:10px; padding-bottom:20px;">
+        @Bootstrap.LinkButton("/Randevu/Create", "primary", string.Empty, string.Empty, "plus", " Yeni")
+    </div>
+
+    <table class="table" style="padding-top:30px;">
+        <tr>
+            <th>
+                Ad
+            </th>
+            <th>
+                Soyad
+            </th>
+            <th>
+                Şehir
+            </th>
+            <th>
+                İlçe/Yer
+            </th>
+            <th>
+                Gün
+            </th>
+            <th>
+                Saat
+            </th>
+            <th>
+                Randevu Oluşturma Nedeni
+            </th>
+            <th>
+                Randevu Onay
+            </th>
+            <th>
+                İşlemler
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Il.İlAdi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ilce.İlceAdi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RandevuGunu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Saat.Saatler)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Neden.RandevuAlmaNeden)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Onay)
+                </td>
+
+                <td width="200">
+
+                    @Bootstrap.LinkButton("/Randevu/Edit/" + item.Id, "warning", "btn-xs", "Düzenle", "edit", string.Empty)
+
+                    @Bootstrap.LinkButton("/Randevu/Details/" + item.Id, "info", "btn-xs", "Detaylar", "search", string.Empty)
+
+                    @Bootstrap.LinkButton("/Randevu/Delete/" + item.Id, "danger", "btn-xs", "Kaldır", "trash", string.Empty)
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>

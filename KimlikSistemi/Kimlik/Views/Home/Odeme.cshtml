@@ -1,0 +1,93 @@
+﻿@using Entities.ModelView
+@model KartModelViews
+@{
+    ViewBag.Title = "Odeme";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kredi Kart İşlemleri</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="~/Content/payment.css" rel="stylesheet" />
+</head>
+@using (Html.BeginForm())
+{
+    <body>
+        <div class="card" >
+        <div class="creditCardForm"style="background-color:darkgray;">
+    <div class="heading">
+        <h1>Kart Bilgileri</h1>
+    </div>
+
+    <div class="payment">
+        @Html.ValidationSummary(false)
+        <form>
+            <div class="row">
+                <label for="owner">Kart Sahibinin Adı Soyadı</label>
+                <div class="col-md-10"> @Html.TextBoxFor(model => model.NameSurname, new { @class = "form-control" })</div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <label for="cardNumber">Kart Numarası</label>
+                    @Html.TextBoxFor(model => model.KartNumarasi, new { @class = "form-control" })
+                </div>
+                <div class="col-md-4">
+                    <label for="cvv">CVV</label>
+                    @Html.TextBoxFor(model => model.CVV, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><label for="cvv">Ay</label> @Html.TextBoxFor(model => model.Ay, new { @class = "form-control" })</div>
+                <div class="col-md-2"><label for="cvv">Yıl</label> @Html.TextBoxFor(model => model.Yil, new { @class = "form-control" })</div>
+                <div class="col-md-8">
+                    <label for="cvv">Odenecek Tutar</label>
+                    @Html.TextBoxFor(model => model.OdemeTutari, new { @class = "form-control" })
+
+                </div>
+            </div>
+
+            <div class="form-group" id="pay-now">
+                <button type="submit" class="btn btn-default">Ödeme Yap</button>
+            </div>
+            <div class="col-md-6 ">
+                <p>
+
+                    @Bootstrap.LinkButton("/Home/Anasayfam", "default", string.Empty, string.Empty, "arrow-left", " Geri Dön")
+                </p>
+            </div>
+            <div class="col-md-6 ">
+                <p>
+
+                    @Bootstrap.LinkButton("/Randevu/Onay", "default", string.Empty, string.Empty, "arrow-right", " İşlemi Tamamla")
+                </p>
+            </div>
+        </form>
+    </div>
+</div></div>
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="~/Scripts/jquery.payform.min.js" charset="utf-8"></script>
+        <script src="~/Scripts/script.js"></script>
+    </body>
+}
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

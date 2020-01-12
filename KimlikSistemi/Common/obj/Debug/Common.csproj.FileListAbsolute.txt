@@ -1,0 +1,9 @@
+C:\Users\aysec\source\repos\OtizmWeb\Common\bin\Debug\Common.dll
+C:\Users\aysec\source\repos\OtizmWeb\Common\bin\Debug\Common.pdb
+C:\Users\aysec\source\repos\OtizmWeb\Common\obj\Debug\Common.csprojAssemblyReference.cache
+C:\Users\aysec\source\repos\OtizmWeb\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\aysec\source\repos\OtizmWeb\Common\obj\Debug\Common.dll
+C:\Users\aysec\source\repos\OtizmWeb\Common\obj\Debug\Common.pdb
+C:\Users\aysec\source\repos\OtizmWeb\Common\bin\Debug\Newtonsoft.Json.dll
+C:\Users\aysec\source\repos\OtizmWeb\Common\bin\Debug\Newtonsoft.Json.xml
+C:\Users\aysec\source\repos\OtizmWeb\Common\obj\Debug\Common.csproj.CopyComplete

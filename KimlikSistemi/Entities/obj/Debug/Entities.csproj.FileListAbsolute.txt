@@ -1,0 +1,14 @@
+C:\Users\aysec\source\repos\OtizmWeb\Entities\bin\Debug\Entities.dll.config
+C:\Users\aysec\source\repos\OtizmWeb\Entities\bin\Debug\Entities.dll
+C:\Users\aysec\source\repos\OtizmWeb\Entities\bin\Debug\Entities.pdb
+C:\Users\aysec\source\repos\OtizmWeb\Entities\bin\Debug\EntityFramework.dll
+C:\Users\aysec\source\repos\OtizmWeb\Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aysec\source\repos\OtizmWeb\Entities\bin\Debug\EntityFramework.xml
+C:\Users\aysec\source\repos\OtizmWeb\Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aysec\source\repos\OtizmWeb\Entities\obj\Debug\Entities.csprojAssemblyReference.cache
+C:\Users\aysec\source\repos\OtizmWeb\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\aysec\source\repos\OtizmWeb\Entities\obj\Debug\Entities.csproj.CopyComplete
+C:\Users\aysec\source\repos\OtizmWeb\Entities\obj\Debug\Entities.dll
+C:\Users\aysec\source\repos\OtizmWeb\Entities\obj\Debug\Entities.pdb
+C:\Users\aysec\source\repos\OtizmWeb\Entities\bin\Debug\Newtonsoft.Json.dll
+C:\Users\aysec\source\repos\OtizmWeb\Entities\bin\Debug\Newtonsoft.Json.xml

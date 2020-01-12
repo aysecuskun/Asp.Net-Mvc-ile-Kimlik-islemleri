@@ -1,0 +1,33 @@
+﻿@using Entities
+@model User
+@{
+    ViewBag.Title = "ShowProfil";
+}
+
+<div class="container">
+    <div class="row">
+
+        <h2>Profiliniz</h2>
+        <hr />
+
+        <div class="col-md-2">
+            <img src="/" class="img-circle" width="128" height="128" />
+        </div>
+        <div class="col-md-10">
+            <br />
+            <h5><b>@Html.DisplayNameFor(model => model.Name): </b>@Model.Name</h5>
+            <h5><b>@Html.DisplayNameFor(model => model.Surname):</b>@Model.Surname</h5>
+            <h5><b>@Html.DisplayNameFor(model => model.TCKN):</b>@Model.TCKN</h5>
+            <h5><b>@Html.DisplayNameFor(model => model.DogumTarihi):</b>@Model.DogumTarihi</h5>
+            <br />
+
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+
+        $("footer").hide();
+    });
+</script>
+
